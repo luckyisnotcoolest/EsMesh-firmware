@@ -1,0 +1,75 @@
+#ifndef ESMESH_PROTOCOL_H
+#define ESMESH_PROTOCOL_H
+
+#include <stdint.h>
+
+/* EsMesh Protocol Version */
+#define ESMESH_PROTOCOL_VERSION "EsMesh/1"
+#define ESMESH_PROTOCOL_MAJOR 1
+#define ESMESH_PROTOCOL_MINOR 0
+
+/* Firmware Version */
+#define ESMESH_FIRMWARE_VERSION "1.0.0"
+
+/* Device Type */
+#define ESMESH_DEVICE_TYPE "ESP32-S3"
+
+/* Message Types */
+#define MSG_TYPE_MESSAGE "message"
+#define MSG_TYPE_PING "ping"
+#define MSG_TYPE_PONG "pong"
+#define MSG_TYPE_CONFIG "config"
+#define MSG_TYPE_CAPABILITIES "capabilities"
+#define MSG_TYPE_STATUS "status"
+
+/* Error Codes */
+#define ERR_CODE_OK "OK"
+#define ERR_CODE_INVALID_REQUEST "INVALID_REQUEST"
+#define ERR_CODE_INVALID_JSON "INVALID_JSON"
+#define ERR_CODE_MISSING_FIELD "MISSING_FIELD"
+#define ERR_CODE_PROTOCOL_MISMATCH "PROTOCOL_MISMATCH"
+#define ERR_CODE_INVALID_TTL "INVALID_TTL"
+#define ERR_CODE_INVALID_PAYLOAD "INVALID_PAYLOAD"
+#define ERR_CODE_DUPLICATE_MSG_ID "DUPLICATE_MSG_ID"
+#define ERR_CODE_INTERNAL_ERROR "INTERNAL_ERROR"
+#define ERR_CODE_WIFI_ERROR "WIFI_ERROR"
+#define ERR_CODE_CONFIG_ERROR "CONFIG_ERROR"
+
+/* Limits */
+#define MAX_JSON_SIZE 4096
+#define MAX_PAYLOAD_SIZE 2048
+#define MAX_DEVICE_NAME_LEN 64
+#define MAX_MSG_ID_LEN 32
+#define MAX_SOURCE_LEN 32
+#define MAX_DEST_LEN 32
+#define MAX_TTL 255
+#define MAX_WEBSOCKET_CLIENTS 10
+#define MAX_MESSAGE_HISTORY 100
+#define DUPLICATE_CACHE_SIZE 50
+
+/* Timeouts (milliseconds) */
+#define WIFI_CONNECT_TIMEOUT_MS 10000
+#define WIFI_RECONNECT_DELAY_MS 5000
+#define WEBSOCKET_TIMEOUT_MS 30000
+#define HTTP_REQUEST_TIMEOUT_MS 5000
+
+/* WiFi */
+#define MAX_SSID_LEN 32
+#define MAX_PASSWORD_LEN 64
+#define MAX_WIFI_RETRIES 5
+#define WIFI_BACKOFF_MULTIPLIER 1.5f
+
+/* HTTP Server */
+#define HTTP_SERVER_PORT 80
+#define HTTP_STACK_SIZE 4096
+#define HTTP_TASK_PRIORITY 5
+
+/* WebSocket */
+#define WS_ENDPOINT "/api/v1/ws"
+#define WS_PING_INTERVAL_MS 30000
+
+/* mDNS */
+#define MDNS_SERVICE "_espmesh._tcp"
+#define MDNS_DOMAIN "local"
+
+#endif /* ESMESH_PROTOCOL_H */
