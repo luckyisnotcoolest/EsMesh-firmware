@@ -1,0 +1,6 @@
+# EsMesh ESP32-S3 Partition Table
+# Name,   Type, SubType, Offset,  Size,   Flags
+block0,    data, nvs,     0x0,     0x5000,
+block1,    data, phy,     0x5000,  0x2000,
+factory,   app,  factory, 0x7000,  0x1f9000,
+web,       data, spiffs,  0x200000, 0x100000,

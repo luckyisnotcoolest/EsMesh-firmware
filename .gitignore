@@ -1,0 +1,41 @@
+# Build artifacts
+build/
+dist/
+*.o
+*.a
+*.so
+*.bin
+*.elf
+*.map
+*.esp32s3
+
+# ESP-IDF specific
+sdkconfig.old
+dependencies.lock.in
+.idf_py_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.env
+
+# Artifacts
+artifacts/
+*.hex
+*.uf2
+
+# OS
+Thumbs.db
+.AppleDouble
+.LSOverride
